@@ -1,0 +1,1 @@
+var $BASE_URL = "http://themicon.co/theme/angle/v2.4/backend-angular/#/app/";
