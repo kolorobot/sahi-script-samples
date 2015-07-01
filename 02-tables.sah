@@ -2,7 +2,8 @@
  * Dashboard: Tables
  */
 
-_navigateTo("http://themicon.co/theme/angle/v2.4/backend-angular/#/app/table-datatable");
+_include("framework/config/config.js");
+_navigateTo($BASE_URL + "table-datatable");
 
 highlightAndWait(_tableHeader("CSS grade"));
 highlightAndWait(_tableHeader("Platform(s)"), _in(_table("datatable1")));

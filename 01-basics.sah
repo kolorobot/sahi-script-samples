@@ -2,7 +2,8 @@
 * Dashboard: Basics
 */
 
-_navigateTo("http://themicon.co/theme/angle/v2.4/backend-angular/#/app/dashboard");
+_include("framework/config/config.js");
+_navigateTo($BASE_URL + "dashboard");
 
 /* Widgets */
 

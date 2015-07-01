@@ -1,0 +1,53 @@
+/*
+ * Forms: Inline edit & HTML5 Inputs
+ */
+
+_include("framework/config/config.js");
+_navigateTo($BASE_URL + "form-xeditable");
+
+var inlineEdit = function ($label, $field, $value) {
+    _click(_link(0, _near($label)));
+    _setValue($field, $value);
+    _click(_submit("btn btn-success btn-sm", _near($field)));
+};
+
+/* Email */
+
+var $emailLabel = _label("Email:");
+var $emailBox = _emailbox(0, _near($emailLabel));
+inlineEdit($emailLabel, $emailBox, "john@doe.com");
+
+
+/* Telephone */
+
+var $telLabel = _label("Tel:");
+var $telBox = _telephonebox(0, _near($telLabel));
+inlineEdit($telLabel, $telBox, "000-00-00");
+
+/* Number */
+
+var $numberLabel = _label("Number:");
+var $numberBox = _numberbox(0, _near($numberLabel));
+inlineEdit($numberLabel, $numberBox, "42");
+
+/* Range */
+
+inlineEdit(_label("Range:"), _rangebox("range"), "42");
+
+/* Url */
+
+var $urlLabel = _label("Url:");
+var $urlBox = _urlbox(0, _near($urlLabel));
+inlineEdit($urlLabel, $urlBox, "http://google.com");
+
+/* Date */
+
+var $dateLabel = _label("Date:");
+var $dateBox = _datebox(0, _near($dateLabel));
+inlineEdit($dateLabel, $dateBox, "2015-05-20");
+
+/* Time */
+
+var $timeLabel = _label("Time:");
+var $timeBox = _timebox(0, _near($timeLabel));
+inlineEdit($timeLabel, $timeBox, "01:00");
